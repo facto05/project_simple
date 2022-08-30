@@ -303,7 +303,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           width: 1, color: Color.fromARGB(232, 155, 15, 15)),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      primary: Colors.white,
+                      primary: const Color.fromARGB(232, 252, 159, 159),
                       minimumSize: const Size.fromHeight(50)),
                   child: const Text(
                     "Cancel",
