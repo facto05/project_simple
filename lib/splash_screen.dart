@@ -38,7 +38,10 @@ class _SplashScreenViewState extends State<SplashScreenView> {
             ),
           ),
           const Text("Copyright @ 2022 by PT. Indocyber Global Teknologi",
-              style: TextStyle(color: Colors.white, fontSize: 10)),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 10,
+                  fontWeight: FontWeight.normal)),
         ],
       ),
     );
