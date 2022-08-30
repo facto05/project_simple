@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:project_simple/bottom_navigation.dart';
 import 'package:project_simple/register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -102,6 +103,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     String password = passwordController.text.toString();
                     print("username => $username");
                     print("password => $password");
+
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const BottomNavigation())));
                   },
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
