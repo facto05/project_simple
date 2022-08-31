@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pw_validator/flutter_pw_validator.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -207,30 +208,40 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15))),
                 ),
-                const SizedBox(
-                  height: 10,
+                FlutterPwValidator(
+                  width: 400,
+                  height: 150,
+                  minLength: 10,
+                  onSuccess: () {},
+                  controller: passwordController,
+                  normalCharCount: 1,
+                  uppercaseCharCount: 1,
+                  numericCharCount: 1,
                 ),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Password must contains :",
-                          style: TextStyle(color: Colors.grey, fontSize: 10),
-                        ),
-                        Text(" \u2022 1 lower case letter [a-z]",
-                            style: TextStyle(color: Colors.grey, fontSize: 10)),
-                        Text(" \u2022 1 Upper case letter [A-Z]",
-                            style: TextStyle(color: Colors.grey, fontSize: 10)),
-                        Text(" \u2022 1 numeric character [0-9]",
-                            style: TextStyle(color: Colors.grey, fontSize: 10)),
-                        Text(" \u2022 at least 10 character in length",
-                            style: TextStyle(color: Colors.grey, fontSize: 10))
-                      ]),
-                ),
+                // const SizedBox(
+                //   height: 10,
+                // ),
+                // Align(
+                //   alignment: Alignment.topLeft,
+                //   child: Column(
+                //       crossAxisAlignment: CrossAxisAlignment.start,
+                //       children: const [
+                //         Text(
+                //           "Password must contains :",
+                //           style: TextStyle(color: Colors.grey, fontSize: 10),
+                //         ),
+                //         Text(" \u2022 1 lower case letter [a-z]",
+                //             style: TextStyle(color: Colors.grey, fontSize: 10)),
+                //         Text(" \u2022 1 Upper case letter [A-Z]",
+                //             style: TextStyle(color: Colors.grey, fontSize: 10)),
+                //         Text(" \u2022 1 numeric character [0-9]",
+                //             style: TextStyle(color: Colors.grey, fontSize: 10)),
+                //         Text(" \u2022 at least 10 character in length",
+                //             style: TextStyle(color: Colors.grey, fontSize: 10))
+                //       ]),
+                // ),
                 const SizedBox(
-                  height: 15,
+                  height: 20,
                 ),
                 Align(
                   alignment: Alignment.topLeft,
