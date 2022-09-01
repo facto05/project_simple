@@ -32,6 +32,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () => Navigator.pop(context),
+          icon: const Icon(Icons.arrow_back_ios_new),
+        ),
         title: const Text("Register"),
         backgroundColor: const Color.fromARGB(232, 155, 15, 15),
       ),

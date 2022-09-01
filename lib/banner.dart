@@ -43,26 +43,27 @@ class _ImageSliderState extends State<ImageSlider> {
         SizedBox(
           width: MediaQuery.of(context).size.width,
           height: 200,
-          child: ClipRRect(
-            child: PageView.builder(
-              itemCount: images.length,
-              pageSnapping: true,
-              controller: _pageController,
-              onPageChanged: (page) {
-                setState(() {
-                  activePage = page;
-                });
-              },
-              itemBuilder: (context, pagePosition) {
-                return Container(
-                  margin: const EdgeInsets.all(10),
+          child: PageView.builder(
+            itemCount: images.length,
+            pageSnapping: true,
+            controller: _pageController,
+            onPageChanged: (page) {
+              setState(() {
+                activePage = page;
+              });
+            },
+            itemBuilder: (context, pagePosition) {
+              return Container(
+                margin: const EdgeInsets.all(10),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
                   child: Image.asset(
                     images[pagePosition],
-                    fit: BoxFit.fitWidth,
+                    fit: BoxFit.fill,
                   ),
-                );
-              },
-            ),
+                ),
+              );
+            },
           ),
         ),
         Row(

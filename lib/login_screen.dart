@@ -104,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     print("username => $username");
                     print("password => $password");
 
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: ((context) => const BottomNavigation())));
