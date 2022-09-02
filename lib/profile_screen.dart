@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:project_simple/bottom_navigation.dart';
+import 'package:project_simple/login_screen.dart';
 
 class ProfileState extends StatefulWidget {
   const ProfileState({Key? key}) : super(key: key);
@@ -140,11 +141,11 @@ class _ProfileStateState extends State<ProfileState> {
             child: ElevatedButton.icon(
               onPressed: () {},
               label: const Text(
-                "Edit Profile",
+                "Application Tracking",
                 style:
                     TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
               ),
-              icon: SvgPicture.asset("svg/icon/ico_edit_profile.svg"),
+              icon: SvgPicture.asset("svg/icon/ico_aplc_track.svg"),
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -158,11 +159,11 @@ class _ProfileStateState extends State<ProfileState> {
             child: ElevatedButton.icon(
               onPressed: () {},
               label: const Text(
-                "Edit Profile",
+                "Change Password",
                 style:
                     TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
               ),
-              icon: SvgPicture.asset("svg/icon/ico_edit_profile.svg"),
+              icon: SvgPicture.asset("svg/icon/ico_chg_pass.svg"),
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -176,11 +177,11 @@ class _ProfileStateState extends State<ProfileState> {
             child: ElevatedButton.icon(
               onPressed: () {},
               label: const Text(
-                "Edit Profile",
+                "My Reward",
                 style:
                     TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
               ),
-              icon: SvgPicture.asset("svg/icon/ico_edit_profile.svg"),
+              icon: SvgPicture.asset("svg/icon/ico_myrwd.svg"),
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -194,11 +195,11 @@ class _ProfileStateState extends State<ProfileState> {
             child: ElevatedButton.icon(
               onPressed: () {},
               label: const Text(
-                "Edit Profile",
+                "Bank Account",
                 style:
                     TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
               ),
-              icon: SvgPicture.asset("svg/icon/ico_edit_profile.svg"),
+              icon: SvgPicture.asset("svg/icon/ico_bank_acc.svg"),
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -212,11 +213,11 @@ class _ProfileStateState extends State<ProfileState> {
             child: ElevatedButton.icon(
               onPressed: () {},
               label: const Text(
-                "Edit Profile",
+                "Privacy Policy",
                 style:
                     TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
               ),
-              icon: SvgPicture.asset("svg/icon/ico_edit_profile.svg"),
+              icon: SvgPicture.asset("svg/icon/ico_prv_polcy.svg"),
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -228,18 +229,25 @@ class _ProfileStateState extends State<ProfileState> {
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
             child: ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LoginScreen()));
+              },
               label: const Text(
-                "Edit Profile",
-                style:
-                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                "Log Out",
+                style: TextStyle(color: Colors.white),
               ),
-              icon: SvgPicture.asset("svg/icon/ico_edit_profile.svg"),
+              icon: SvgPicture.asset(
+                "svg/icon/ico_logout.svg",
+                fit: BoxFit.scaleDown,
+              ),
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  primary: Colors.white,
+                  primary: const Color.fromARGB(255, 145, 29, 29),
                   minimumSize: const Size.fromHeight(50)),
             ),
           ),
