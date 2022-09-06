@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^1.1.4
   carousel_slider: ^4.1.1
   flutter_pw_validator: ^1.4.2
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:

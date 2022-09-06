@@ -1,6 +1,12 @@
+import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
+import 'package:http/http.dart' as http;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:project_simple/bottom_navigation.dart';
+import 'package:project_simple/model/list_movie_popular.dart';
 import 'package:project_simple/register_screen.dart';
 
 class LoginScreen extends StatefulWidget {

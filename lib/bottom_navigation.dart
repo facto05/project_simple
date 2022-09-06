@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_simple/home_screen.dart';
 import 'package:project_simple/profile_screen.dart';
+import 'package:project_simple/screen/movie_popular_screen.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -11,7 +12,11 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedNavBar = 0;
-  final List _widgetOption = [const HomeState(), const ProfileState()];
+  final List _widgetOption = [
+    const HomeState(),
+    const MoviePopularState(),
+    const ProfileState()
+  ];
 
   void _changeSelectedNavBar(int index) {
     setState(() {
@@ -27,6 +32,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.movie), label: "Movie"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
         selectedItemColor: Colors.red,
